@@ -82,7 +82,7 @@ public class General implements Module {
             return;
         }
         
-        Resource.sendMessage("I say " + choices[ThreadLocalRandom.current().nextInt(choices.length)]);
+        Resource.sendMessage("I say " + choices[ThreadLocalRandom.current().nextInt(choices.length)].trim());
     }
 
     @Command(name = "c")
@@ -438,7 +438,7 @@ public class General implements Module {
     public static void cmdRofl(ChatMessage chat) throws SkypeException {
         Resource.sendMessage(chat, "ROFL all day long! http://goo.gl/pCIqXv");
     }
-
+    
     @Command(name = "restoretopic", admin = true)
     public static void cmdRestoreTopic(ChatMessage chatMessage) throws SkypeException {
         Resource.sendMessage("/topic Mazen's Skype Chat :: Student freebies: https://education.github.com | https://www.jetbrains.com/student/ | http://products.office.com/en-us/student/office-in-education");
@@ -448,4 +448,5 @@ public class General implements Module {
     public static void cmdConvoPictureChange(ChatMessage chatMessage) throws SkypeException {
         Resource.sendMessage("/me would love to remove " + chatMessage.getSenderId() + "'s ass right now");
     }
+    
 }
